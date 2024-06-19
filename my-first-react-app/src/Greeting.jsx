@@ -44,9 +44,14 @@ function Button({text,color,fontSize}) {
         fontSize: fontSize + 'px'
     };
 
+    const handleButtonClick = () => {
+        window.location.href = "https://www.google.com/search?q=" + text;
+    };
+
+
     return (
         <li>
-            <button style = {buttonStyle}>{text}</button>
+            <button onClick = {handleButtonClick} style = {buttonStyle}>{text}</button>
         </li>
     )
         
@@ -57,6 +62,8 @@ Button.defaultProps = {
     color: "blue",
     fontSize: 12
 }
+
+
 
 function ButtonList(props)
 {
@@ -81,6 +88,7 @@ export function ListTest2()
         </>
     );
 }
+
 
 export function ListTest3()
 {
