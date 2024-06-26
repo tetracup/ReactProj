@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
-      Hello World!
+      <div className='conRow'>
+        <input />
+        <input />
+      </div>
     </>
   )
 }

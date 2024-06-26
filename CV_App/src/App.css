@@ -1,0 +1,11 @@
+.conRow{
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+}
+
+.conCol{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
