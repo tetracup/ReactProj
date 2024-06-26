@@ -56,6 +56,20 @@ function Button({text,color,fontSize}) {
     )
         
 }
+/* 
+function NormButton({text,color,fontSize, btnFunc}) {
+    const buttonStyle = {
+        color: color, 
+        fontSize: fontSize + 'px'
+    };
+
+
+    return (
+        <button onClick = {btnFunc(color)} style = {buttonStyle}>{text}</button>
+    )
+        
+}
+*/
 
 Button.defaultProps = {
     text: "Click Me!",
@@ -95,7 +109,7 @@ export function ListTest3()
     const buttonTexts = [
         { text: "Orange", id: uuid() },
         { text: "Raspberry", id: uuid() },
-        { text: "Strawberry", id: uuid() },
+        { text: "Banana", id: uuid() },
       ];
     return (
         <>
