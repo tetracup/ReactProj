@@ -1,11 +1,49 @@
-.conRow{
+.section{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    width: 40px;
+    width: 100%;
 }
 
-.conCol{
+.section:nth-child(6) {
+    background-color: blue;
+}
+
+input{
+    width: 100%;
+}
+
+.inputField{
+    margin: 10px;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+.sectionAll{
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: fit-content;
+    padding: 10px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#blue{
+    background-color: lightgray;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
