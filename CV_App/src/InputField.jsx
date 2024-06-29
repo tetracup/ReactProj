@@ -1,13 +1,18 @@
 
-function InputField (props) {
+function InputField ({text, _type}) {
     return(
         <>
             <div className = "inputField">
-                <p> {props.text} </p> 
-                <input type = "text" />
+                <p> {text} </p> 
+                <input type = {_type} />
+                
             </div>
         </>
     )
+}
+
+InputField.defaultProps = {
+    _type: "text"
 }
 
 export default InputField
