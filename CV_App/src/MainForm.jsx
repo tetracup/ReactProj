@@ -7,9 +7,9 @@ import Button from './Button.jsx'
 function MainForm(props){
     return(
         <div id = "blue">
-            <Section title = "Personal Information">
-          <InputField text = "Name" />
-          <InputField text = "Email"/>
+        <Section title = "Personal Information">
+          <InputField text = "Name" value = {props.formInputs.firstName} onChange={(e) => {props.formInputs.firstName = e.target.value}}/>
+          <InputField text = "Email" onChange={(e) => {props.formInputs.email = e.target.value}}/>
           <InputField text = "Phone Number" _type = "number"/>
         </Section>
         <Section title = "Education">

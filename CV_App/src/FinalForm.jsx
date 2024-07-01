@@ -4,7 +4,9 @@ function FinalForm (props) {
  return (
      <>
         <div>
-            Correct! 
+        <pre>
+        {JSON.stringify(props.formInputs, null, 2)}
+        </pre>
         </div>
         <button onClick = {props.stateChangeBtns}> Modify! </button>
      </>

@@ -9,12 +9,12 @@ function App() {
   const handleStateChange = (content) => {
     setBodyContent(content)
   }
-
+  let formInputs = {firstName: "None"}
   var final = 
-  <FinalForm stateChangeBtns = {() => handleStateChange(main)}/>
+  <FinalForm formInputs = {formInputs} stateChangeBtns = {() => handleStateChange(main)}/>
 
   var main = 
-  <MainForm stateChangeBtns = {() => handleStateChange(final)} /> 
+  <MainForm formInputs = {formInputs} stateChangeBtns = {() => handleStateChange(final)} /> 
 
   const [bodyContent, setBodyContent] = useState(main)
   
