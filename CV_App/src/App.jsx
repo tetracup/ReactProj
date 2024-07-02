@@ -6,15 +6,17 @@ import FinalForm from "./FinalForm.jsx"
 
 function App() {
 
+  let formInputs = {}
+
   const handleStateChange = (content) => {
     setBodyContent(content)
   }
-  let formInputs = {firstName: "None"}
+  
   var final = 
-  <FinalForm formInputs = {formInputs} stateChangeBtns = {() => handleStateChange(main)}/>
+  <FinalForm stateChangeBtns = {() => handleStateChange(main)} formInputs = {formInputs}/>
 
   var main = 
-  <MainForm formInputs = {formInputs} stateChangeBtns = {() => handleStateChange(final)} /> 
+  <MainForm stateChangeBtns = {() => handleStateChange(final)} formInputs = {formInputs}/> 
 
   const [bodyContent, setBodyContent] = useState(main)
   
