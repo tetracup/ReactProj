@@ -17,16 +17,17 @@ body {
 }
 
 .card{
+    background-color: blue;
     padding: 0;
-    max-width: 200px;
-    height: 200px;
+    max-width: 175px;
+
     max-height: 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
     font-family: monospace;
-    margin: 10px;
+    margin: 25px;
     font-size: 20px;
 } 
 

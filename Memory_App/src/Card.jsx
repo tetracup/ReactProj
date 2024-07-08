@@ -1,10 +1,10 @@
 import './App.css'
 
 
-function Card({url}) {
+function Card({url, onClick}) {
   return (
     <>
-        <div className = "card">
+        <div className = "card" onClick = {onClick}>
           <img src = {url}/>
         </div>
     </>

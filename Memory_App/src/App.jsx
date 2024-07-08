@@ -8,6 +8,8 @@ function App() {
 
   const [art, setArt] = useState([])
   const [search, setSearch] = useState("van gogh")
+  const selectedItems = []
+
   useEffect(() => {
     {/* Sleeping Beauties: Reawakening Fashion to test less than 10 */}
       
@@ -62,12 +64,33 @@ function App() {
     fetchAll() 
     
   }, [search]);
+
   let searchInput = ""
   const handleInput = (text) => {
     searchInput = text
   }
   const handleSearch = () => {
     setSearch(searchInput)
+  }
+  
+  const handleArtClick = () => {
+    let indexes = Array.from(art.keys())
+    let randomised = []
+    for(let i = 0; i < art.length; i++)
+    {
+      let ind = Math.floor(Math.random() * indexes.length)
+      
+      randomised.push(indexes[ind])
+      indexes.splice(ind, 1)
+    }
+
+    let newImages = []
+    for(let i = 0; i < randomised.length; i++)
+    {
+      newImages.push(art[randomised[i]])
+    }
+
+    setArt(newImages)
   }
 
   return (
@@ -83,7 +106,7 @@ function App() {
       <div className = "main">
         
         {art.map((entry) => (
-          <Card key =  {entry[0]} url = {entry[1]}/>
+          <Card key = {entry[0]} url = {entry[1]} onClick = {handleArtClick}/>
         ))}
       </div>
       <div className = "footer">
