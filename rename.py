@@ -39,7 +39,7 @@ def ChangeName(oldName, newName):
     rename_directory('./' + oldName, './' + newName)
     
 #Old Name, New Name
-ChangeName("rrename", "Memory_App")
+ChangeName("rrname", "BoilerPlateReactWithTest")
 
 
 
