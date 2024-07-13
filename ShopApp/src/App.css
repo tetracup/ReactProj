@@ -1,0 +1,94 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-color: gray;
+    height: 20%;
+    min-height: 100px;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent{
+    background-color: lightgray;
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: rgb(230, 230, 230);
+    height: 100px; 
+    width: 100px; 
+    border-radius: 1rem;
+    border-color: rgb(129, 129, 129);
+    border-width: 0.1rem;
+    box-shadow: 0.1rem 0.1rem 0 0 rgb(129, 129, 129);
+    padding: 0.5rem; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .top, .card .bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .top{
+    background-color: lightblue;
+    height: 100%;
+}
+
+.top img, .top .productInfo{
+    max-height: 100%;
+    width: 100%;
+}
+.productInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .bottom{
+    background-color: lightgoldenrodyellow;
+    height: 30%;
+}
+
+.bottom input{
+    width: 15px; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    border-radius: 0.5rem;
+    border-width: 0.01rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bottom button{
+    padding: 0;
+    margin: 0.1rem;
+    height: fit-content;
+}
