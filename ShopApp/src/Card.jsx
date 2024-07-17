@@ -1,25 +1,38 @@
 import './Card.css'
 import testSVG from './assets/react.svg'
-
+import {useState, useRef} from 'react'
 function Card() {
+  let counter = 0; 
+  const inputRef = useRef(); 
+  const handleIncrement = (increment) => {
+    let newCounter = counter + increment; 
+    newCounter = newCounter < 0 ? 0 : newCounter;
+    inputRef.current.value = newCounter; 
+    counter = newCounter; 
+  }
+
+  const handleReset = () => {
+    counter = 0; 
+    inputRef.current.value = counter; 
+  }
 
   return (
     <div className = "card">
         <div className = "top">
             <img src = {testSVG} />
             <div className = "productInfo">
-                Title 
-                Price 
+                Title <br />
+                Price <br />
                 Stock
             </div>
         </div>
         <div className = "bottom">
-          <div>
-            <button className = "modify">-</button>
-            <input type = "number" value = "0" min = "0" max = "99"/>
-            <button className = "modify">+</button>
+          <div className = "modifyBtns center">
+            <button className = "modify minus center" onClick ={() => {handleIncrement(-1)}}>-</button>
+            <input type = "number" defaultValue = {counter} onChange = {(e) => {counter = parseInt(e.target.value)}}ref = {inputRef}/>
+            <button className = "modify center " onClick ={() => {handleIncrement(1)}}>+</button>
           </div>
-          <button> Add </button>
+          <button onClick = {handleReset}> Add </button>
         </div>
     </div>
   )

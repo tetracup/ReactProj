@@ -1,8 +1,8 @@
 
 .card{
     background-color: rgb(230, 230, 230);
-    height: 100px; 
-    width: 100px; 
+    height: 10rem; 
+    width: 10rem; 
     border-radius: 1rem;
     border-color: rgb(129, 129, 129);
     border-width: 0.1rem;
@@ -17,7 +17,7 @@
 .top, .bottom{
     width: 100%;
     display: flex;
-    
+    font-size: 1rem; 
 }
 
 .top{
@@ -31,7 +31,12 @@
     background-color: lightgoldenrodyellow;
     height: 30%;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+}
+
+.bottom > *{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .top img, .top .productInfo{
@@ -46,13 +51,15 @@
 }
 
 input{
-    width: 15px; 
-    text-align: center;
-    padding: 0; 
-    margin: 0;
+    width: 1.3rem; 
+    height: 1.3rem; 
+    text-align:center; 
     border-radius: 1rem;
     border-width: 0.05rem;
     border-style: solid;
+    font-size: 1rem; 
+    padding: 0; 
+    padding-top: 0.1rem; 
 }
 
 input::-webkit-outer-spin-button,
@@ -67,9 +74,28 @@ button{
     height: fit-content;
 }
 .modify{
-    border-width: 0px;
+    border-width: 0;
+    font-size: 1.5rem; 
+    height: 1rem; 
+    width: 1rem;
+    background-color: transparent;
+}
+
+.minus {
+    position: relative; 
+    top: -0.1rem; 
 }
 
 .modify:hover{
     text-shadow: 0 -1px lightgreen, 0 1px lightgreen, 1px 0 lightgreen, -1px 0 lightgreen;
+}
+
+.center{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.modifyBtns{
+    background-color: lightblue;
+    border-radius: 1rem; 
 }
