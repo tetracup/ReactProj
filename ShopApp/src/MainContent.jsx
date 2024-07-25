@@ -7,6 +7,7 @@ function MainContent({cardKeys}) {
   console.log(cardKeys)
   return (
     <div className = "mainContent">
+      <Card />
       {cardKeys.map( 
         (id) => 
           (

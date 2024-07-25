@@ -1,6 +1,6 @@
 import './Card.css'
 import testSVG from './assets/react.svg'
-import {useState, useRef} from 'react'
+import {useRef} from 'react'
 function Card() {
   let counter = 0; 
   const inputRef = useRef(); 

@@ -6,13 +6,13 @@ import Container from './Container.jsx'
 import {useState}from 'react'
 
 function App() {
-  let cardCount = 20
+  let cardCount = 19
   let cardKeys = Array.from(Array(cardCount).keys());
 
   return (
     <Container>
       <Header cardKeys = {cardKeys}/>
-      <MainContent cartdKeys = {cardKeys}/>
+      <MainContent cardKeys = {cardKeys}/>
     </Container>
   )
 }
