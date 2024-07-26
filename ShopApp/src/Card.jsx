@@ -1,7 +1,7 @@
 import './Card.css'
 import testSVG from './assets/react.svg'
 import {useRef} from 'react'
-function Card() {
+function Card({canRemove}) {
   let counter = 0; 
   const inputRef = useRef(); 
   const handleIncrement = (increment) => {
@@ -33,6 +33,7 @@ function Card() {
             <button className = "modify center " onClick ={() => {handleIncrement(1)}}>+</button>
           </div>
           <button onClick = {handleReset}> Add </button>
+          { canRemove && <button > Remove </button> } 
         </div>
     </div>
   )

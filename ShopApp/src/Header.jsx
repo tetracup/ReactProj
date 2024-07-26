@@ -1,17 +1,14 @@
 import './App.css'
 import Basket from './Basket.jsx'
 import testSVG from './assets/react.svg'
-function Header() {
 
+function Header() {
   return (
     <div className = "header">
-      <img src = {testSVG} /> 
-      <div>
-        Header
-      </div>
+      <img src = {testSVG} />  
+      Header
       <Basket /> 
     </div>
-    
   )
 }
 
