@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400);
+body, p{
+    padding: 0;
+    margin: 0;
+}
+
+.font {
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.title {
+    color: #a8ba9a;
+    font-size: 50px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    margin-right:auto;
+    margin-left: 50px; 
+}
+
+.container {
+    height: 100vh; 
+    background-color: #a8ba9a; 
+}
+
+.navbar {
+    display: flex;
+    background-color: #4a314d;
+    height: 100px; 
+    align-items: center;
+}
+
+button {
+    height: 50px; 
+    width: 50px; 
+    margin: 50px;
+    background-color: transparent;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    border-width: 0;
+
+}
+
+button:hover {
+    filter: drop-shadow(0.5px 0.5px white);
+}
+
+.homemain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    width: 60%;
+    max-width: 600px; 
+}
+
+button img {
+    width: 100%; 
+    height: 100%; 
+}
